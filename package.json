@@ -1,0 +1,24 @@
+{
+  "name": "api-connect",
+  "version": "1.0.0",
+  "description": "API REST para gerenciamento de usuários desenvolvida com Node.js e Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "crud"
+  ],
+  "author": "Elieder Correa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
