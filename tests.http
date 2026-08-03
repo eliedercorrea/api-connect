@@ -1,0 +1,50 @@
+### API Connect - Testes manuais
+
+### 1. Rota inicial
+GET http://localhost:3000/
+
+### 2. Listar usuários - esperado 200
+GET http://localhost:3000/usuarios
+
+### 3. Buscar usuário por ID - esperado 200
+GET http://localhost:3000/usuarios/1
+
+### 4. Buscar usuário inexistente - esperado 404
+GET http://localhost:3000/usuarios/999
+
+### 5. Cadastrar usuário - esperado 201
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Carlos Oliveira",
+  "email": "carlos@email.com"
+}
+
+### 6. Cadastro inválido sem e-mail - esperado 400
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Pedro Santos"
+}
+
+### 7. Atualizar parcialmente - esperado 200
+PATCH http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "João Atualizado"
+}
+
+### 8. Atualizar totalmente - esperado 200
+PUT http://localhost:3000/usuarios/2
+Content-Type: application/json
+
+{
+  "nome": "Maria Atualizada",
+  "email": "maria.atualizada@email.com"
+}
+
+### 9. Excluir usuário - esperado 200
+DELETE http://localhost:3000/usuarios/2
